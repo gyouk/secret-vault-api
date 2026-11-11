@@ -1,0 +1,17 @@
+{
+    "name": "vbaba/secret-vault",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vlad Babarin",
+            "email": "gokkatx@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    }
+}

@@ -12,4 +12,9 @@ var_dump(SecretType::Note->ttlDays());          // NULL
 
 $s = new Secret('1', SecretType::Note, 'hello', new DateTimeImmutable(), null);
 var_dump($s->isExpired(new DateTimeImmutable())); // bool(false)
-$s->value = 'x'; // має впасти: Cannot modify readonly property
+
+try {
+       $s->value = 'x';
+   } catch (\Error $e) {
+       echo 'OK, readonly works: ' . $e->getMessage() . PHP_EOL;
+   }
